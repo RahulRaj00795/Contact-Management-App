@@ -1,0 +1,337 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #d5d6d7;
+  box-sizing: border-box;
+
+  width: 100%;
+}
+
+.app {
+  display: flex;
+  width: 100%;
+
+}
+
+
+.main-content {
+  width: 100%;
+}
+
+.contact-car {
+  margin-bottom: 20px;
+  padding: 20px;
+  background-color: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+
+
+.contact-list {
+  margin-bottom: 20px;
+  padding: 20px;
+  background-color: #f4f4f4;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+
+
+
+.contact-list {
+  display: flex;
+  flex-direction: column;
+
+}
+
+.contact-item {
+  padding: 10px 15px;
+  margin-bottom: 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  background-color: #e9ecef;
+  color: #333;
+  transition: background-color 0.3s;
+
+}
+
+.contact-item:hover {
+  background-color: #ced4da;
+}
+
+
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+.modal p {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.modal button {
+  margin: 5px;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  background-color: #dc3545;
+  color: white;
+  font-size: 14px;
+}
+
+.modal button:last-child {
+  background-color: #6c757d;
+}
+
+.modal button:hover {
+  opacity: 0.9;
+}
+
+.top {
+  display: flex;
+  padding: 10px 40px 0px;
+}
+
+.left {
+  width: 50%;
+}
+
+.right {
+  margin-left: 30px;
+  width: 100%;
+}
+
+.flex {
+  display: flex;
+
+}
+
+/* General Reset */
+
+/* Responsive Styles */
+
+@media (min-width: 1025px) {
+
+  /* Your styles here */
+  .main-content {
+    margin: 10px 25px 10px 25px;
+  }
+
+  .top {
+    padding: 0;
+  }
+
+  .contact-container {
+    width: 100%;
+    margin: 0;
+  }
+
+}
+
+
+/* Small Screen Adjustments */
+@media (max-width: 1024px) {
+
+  /* Adjust top layout */
+  .top {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contact-container {
+    margin: 0px 40px;
+    overflow: auto;
+    width: 92.2%;
+  }
+
+  .left,
+  .right {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .right {
+    margin-left: 0;
+  }
+
+
+}
+
+/* Medium Screen Adjustments (Tablets or Small Desktops) */
+@media (max-width: 768) {
+
+  .left,
+  .right {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .side {
+    display: none;
+  }
+
+  /* Adjust modal and buttons */
+  .modal {
+    width: 80%;
+  }
+
+  .flex {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .form-group {
+    height: 460px;
+  }
+
+  .contact-form select {
+    width: 98%;
+  }
+
+
+  /* Contact items will adjust based on screen size */
+  .contact-container {
+    overflow: auto;
+  }
+
+  .top {
+    padding-right: 12px;
+  }
+
+  .contact-item {
+    font-size: 14px;
+  }
+}
+
+/* Small Screen Adjustments (Mobile Phones) */
+@media (max-width: 600px) {
+
+  /* Adjust top section */
+  .top {
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .left,
+  .right {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .form-group {
+    height: 460px;
+  }
+
+  .side {
+    display: none;
+  }
+
+  /* Adjust  */
+  .contact-container {
+    margin: 0px 11px;
+    width: 96%;
+    overflow: auto;
+  }
+
+  .contact-card {
+    max-width: 100%;
+    margin: 0;
+  }
+
+  .contact-form {
+    width: 100%;
+  }
+
+  .contact-car {
+    max-width: 100%;
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    width: 88%;
+  }
+
+  .contact-form select {
+
+    width: 94%;
+  }
+
+  .contact-form button {
+
+    width: 27%;
+
+    height: 33px;
+    margin-top: 26px;
+    font-size: 12px;
+    margin-right: 11px;
+    margin-left: 23px;
+  }
+
+  .choose {
+    margin: 4px;
+    height: 19px;
+    width: 79px;
+    font-size: 10px;
+  }
+
+  .contact-item {
+    font-size: 12px;
+    padding: 8px 10px;
+  }
+
+  /* Contact List full width */
+  .contact-list {
+    padding: 15px;
+  }
+}
+
+/* Very Small Screen Adjustments (Mobile Phones in Portrait Mode) */
+/* @media (max-width: 320px) {
+  .contact-item {
+    font-size: 12px;
+    padding: 5px 10px;
+  }
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  width: 100%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.container,
+.app {
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.some-element {
+  max-width: 100%;
+  overflow-wrap: break-word;
+} */
